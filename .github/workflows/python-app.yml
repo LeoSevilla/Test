@@ -1,0 +1,15 @@
+name: Ejecutar bot de IRC
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  ejecutar-script:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Clonar repositorio
+      uses: actions/checkout@v2
+    - name: Ejecutar script de Python
+      run: python3 botirc.py
